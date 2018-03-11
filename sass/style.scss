@@ -4,11 +4,43 @@
   box-sizing: border-box;
 }
 
+body {
+  margin-top: 100px;
+}
+
 #carousel {
   width: 400px;
   height: 300px;
   margin: 0 auto;
+  position: relative;
+}
+
+.wrapper {
   overflow: hidden;
+  position: relative;
+}
+
+@mixin button {
+  background: none;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+}
+
+#btn-prev {
+  @include button;
+  left: -10%;
+  transform: rotate(225deg);
+}
+
+#btn-next {
+  @include button;
+  right: -10%;
+  transform: rotate(45deg);
 }
 
 ul {
@@ -26,4 +58,25 @@ li {
     object-fit: cover;
   }
 }
+
+.pagination {
+  position: absolute;  
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.pagination-btn {
+  padding: 3px;
+  width: 30px;
+  margin: 0 2px 0 2px;
+  border: 1px solid black;
+  cursor: pointer;
+  background: transparent;
+}
+
+.active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 
