@@ -13,8 +13,7 @@ body {
   position: relative; }
 
 .wrapper {
-  overflow: hidden;
-  position: relative; }
+  overflow: hidden; }
 
 #btn-prev {
   background: none;
@@ -40,15 +39,14 @@ body {
   right: -10%;
   transform: rotate(45deg); }
 
-ul {
+.photos-list {
   width: 2000px;
   display: flex; }
-
-li {
-  width: 400px;
-  height: 300px;
-  list-style-type: none; }
-  li img {
+  .photos-list li {
+    width: 400px;
+    height: 300px;
+    list-style-type: none; }
+  .photos-list img {
     width: 100%;
     height: 100%;
     object-fit: cover; }
@@ -57,17 +55,18 @@ li {
   position: absolute;
   bottom: 3%;
   left: 50%;
-  transform: translate(-50%); }
+  transform: translate(-50%);
+  display: flex; }
+  .pagination li {
+    padding: 3px;
+    width: 30px;
+    margin: 0 2px 0 2px;
+    border: 1px solid black;
+    cursor: pointer;
+    background: transparent;
+    list-style-type: none; }
 
-.pagination-btn {
-  padding: 3px;
-  width: 30px;
-  margin: 0 2px 0 2px;
-  border: 1px solid black;
-  cursor: pointer;
-  background: transparent; }
-
-.active {
+.pagination .active {
   background-color: rgba(0, 0, 0, 0.5); }
 
 /*# sourceMappingURL=style.css.map */
