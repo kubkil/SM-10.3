@@ -48,6 +48,7 @@ $(function() {
     photosList.animate({marginLeft: -400 * slide}, 500);
   }
 
+  // kontekst - zamiast this > self?
   // function() {
   //   $(this).find('li:last').after($(this).find('li:first'));
   //   $(this).css('marginLeft', '0');
